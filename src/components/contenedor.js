@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-export function  Contenedor(props) {
+export function Contenedor(props) {
     const [input, setInput] = useState('');
 
     const handleChange = e => {
@@ -12,8 +12,8 @@ export function  Contenedor(props) {
         e.preventDefault();
 
         props.onSubmit({
-        id: Math.floor(Math.random() *1000),
-        text:input 
+            label: input,
+            done: false
         })
         setInput('');
     }
@@ -28,7 +28,7 @@ export function  Contenedor(props) {
                     name="text"
                     className="todo-input"
                     onChange={handleChange}
-                     />
+                />
             </form>
         </>
     )
