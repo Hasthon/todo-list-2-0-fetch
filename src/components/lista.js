@@ -52,7 +52,7 @@ export function Lista() {
             })
             .catch(error => {
                 //manejo de errores
-                alert('No fue posible leer tarea')
+                //alert('No fue posible leer tarea')
                 console.error(error);
             });
     }
@@ -68,12 +68,12 @@ export function Lista() {
                 return resp.json();
             })
             .then(data => {
-                alert("Se eliminaron todas las tareas")
+                //alert("Se eliminaron todas las tareas")
                 setTodos([])
             })
             .catch(error => {
                 //manejo de errores
-                alert('No fue posible emilinar tarea')
+                //alert('No fue posible emilinar tarea')
                 console.error(error);
             });
     }
@@ -103,12 +103,12 @@ export function Lista() {
                 if (data) {
                     console.log(data);
                     setTodos(tareas);
-                    alert(data.result)
+                   // alert(data.result)
                 }
             })
             .catch(error => {
                 //manejo de errores
-                alert('No fue posible editar tareas')
+                //alert('No fue posible editar tareas')
                 console.error(error);
             });
     }
